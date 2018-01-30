@@ -1,0 +1,130 @@
+$contentGround: null !default;
+
+body {
+background: $bodyGround;	
+font-family: Helvetica;
+}
+
+@mixin image() {
+	padding: 2px;
+	border: 2px solid $titleColor;
+}
+
+#content {
+    width: 1080px;
+    margin: 0 auto;
+    padding: 20px;
+    background: $contentGround;
+
+		h1 {
+			text-align: center;
+		}
+
+		h1,h2 {
+			color:$titleColor;
+		}
+		
+		p {
+		font-size: 16px;
+		color: $paragraphColor;
+		}
+
+	
+		a {
+		color:$linxColor;
+		}
+	
+		table {
+			border-collapse: collapse;
+		
+			caption {
+			text-align: right;
+		    }
+
+			th {
+			background-color: $tableColor;
+			text-align: left;
+			border-right: 1px solid #ffffff;
+			text-transform: uppercase;
+			padding: 10px 0 10px 30px;
+			
+			
+				&:last-child {
+					border: none;
+				}
+			}
+
+			td {
+			padding: 10px 10px 10px 20px;
+			border-bottom: 1px solid $tableColor;
+			background: $tdGround;
+			color: $paragraphColor;
+			}
+		}
+	
+		.img-left {
+		float: left;
+		margin-right: 20px;
+        @include image;		
+		}
+
+		.img-right {
+		float: right;
+		margin-left: 20px;
+		@include image;
+		}
+	
+	    .brief {
+		float: $brieffloat;
+		width: $briefwidth;
+		padding: 10px;
+		margin: $briefmargin;
+		background: $briefColor;
+		}
+	
+		form {
+			
+			input {
+			width: 100%;
+			color: $placeholderColor;
+			padding: 5px;
+			border: 1px solid $labelColor;
+			margin-top: 5px;
+			}
+
+			label {
+			color: $labelColor;
+			text-transform: uppercase;
+			}
+			
+			textarea {
+			width: 100%;
+			height: 200px;
+			color: $placeholderColor;
+			border: 1px solid $labelColor;
+			margin-top: 5px;
+			}
+
+			#name {
+			display: flex;
+			justify-content: space-between;
+
+				#firstname, #lastname {
+				width: 49%
+				}
+			}
+			
+			.form_field {
+			margin-top: 10px;			
+			}
+
+			button {
+			padding: 10px 50px;
+			color:$linxColor;	
+			background-color: $contentGround;
+			border: 1px solid $linxColor;
+			text-transform: uppercase;
+			font-size: 15px;
+			}
+		}
+}
