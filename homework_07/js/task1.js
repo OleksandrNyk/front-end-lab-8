@@ -6,12 +6,12 @@ if ( num < 1 || num > 20 || isNaN(parseInt(num))) {
 	console.error('Incorrect!');
 } else {
 	
-	 var line = "";
+	 var tier = "";
          for (var i = 1; i <= num; i++) {
          for (var j = 1; j <= i; j++) {
-         line += unit;
+         tier += unit;
          }
-         line += "\n";
+         tier += "\n";
          }
-         console.log(line);		
+         console.log(tier);		
 }
