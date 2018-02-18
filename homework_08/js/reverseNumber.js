@@ -4,5 +4,5 @@
 	 return sign * rev;
  }
  
- /*console.log(reverseNumber(-11134568309.67676));*/
+ /*console.log(reverseNumber(-11134568309));*/
 
