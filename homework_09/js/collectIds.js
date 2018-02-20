@@ -31,11 +31,11 @@ let movies = [
 
 
 function collectIds(imdb){
-	let average = getFilteredArray(movies, function(rate){
-        return rate.rating > 3;
+    let average = getFilteredArray(movies, function(rate){
+    return rate.rating > 3;
     });
     let ratedID = getTransformedArray(average, function(order){
-        return order.id;
+    return order.id;
     });
     return ratedID;
 }
